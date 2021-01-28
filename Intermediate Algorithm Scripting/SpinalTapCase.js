@@ -1,11 +1,11 @@
 // Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
 
 function spinalCase(str) {
-    let final = str.split(/ |-|_|(?=[A-Z])/)
+    let final = str.split(/\s|[\W_]|(?=[A-Z])/)
     return final.join("-").toLowerCase();
   }
   
-  console.log(spinalCase('AllThe-small Things'));
+  console.log(spinalCase("This Is Spinal Tap"));
 
 // spinalCase("This Is Spinal Tap") should return "this-is-spinal-tap".
 // spinalCase("thisIsSpinalTap") should return "this-is-spinal-tap".
